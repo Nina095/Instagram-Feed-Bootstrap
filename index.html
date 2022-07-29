@@ -1,178 +1,202 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 
 <head>
-   <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <title>Bootstrap demo</title>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/c439f6dec6.js" crossorigin="anonymous"></script>
+    <title>Instagram Photo Feed </title>
 </head>
 
 <body>
-   <div class="container-fluid">
-      <div class="row bg-light text-dark">
-         <div class="col text-center">
-            <p class="h3"><i class="fa fa-instagram">Instagram</i></p>
-         </div>
 
-         <div class="col text-end">
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
-               Open modal
-            </button>
+    <nav class="navbar navbar-light sticky-top bg-light">
+        <a class="navbar-brand" href="#"><i class="fab fa-instagram"></i> Instagram</a>
 
-            <div class="modal" id="myModal">
-               <div class="modal-dialog">
-                  <div class="modal-content">
+        <ul class="nav">
+            <li class="nav-item">
+                <button type="button" class="btn btn-primary btn-md btn-primary" data-toggle="modal"
+                    data-target="#exampleModal">Create a new Post</button>
+            </li>
 
-                     <div class="modal-body">
-                        <div class="mb-3">
-                           <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                    aria-expanded="false"><i class="fas fa-cog"></i></a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Log Out</a>
+                </div>
+            </li>
+        </ul>
+
+    </nav>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+
+        <div class="modal-dialog modal-lg" role="document">
+
+            <div class="modal-content">
+                <div class="modal-body">
+                    <textarea class="form-control" aria-label="with textarea"></textarea>
+                    <i class="fas fa-camera-retro p-1 border rounded mt-1"></i>
+                    <i class="fas fa-map-marker-alt p-1 border rounded mt-1"></i>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-success btn-sm">Publish</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+
+        <ul class="nav nav-pills justify-content-center mt-4 " role="tablist">
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="pill" href="#view1"><i class="fas fa-th" aria-hidden="true"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="pill" href="#view2"><i class="fas fa-square"
+                        aria-hidden="true"></i></a>
+            </li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="view1" class="container-fluid tab-pane active"><br>
+
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 px-1 my-1">
+                        <img src="https://i.picsum.photos/id/1015/6000/4000.jpg?hmac=aHjb0fRa1t14DTIEBcoC12c5rAXOSwnVlaA5ujxPQ0I" alt="Card imagen cap" width="100%" height="350px">
+                    </div>
+                    <div class="col-md-4 col-sm-6 px-1 my-1">
+                        <img src="https://i.picsum.photos/id/102/4320/3240.jpg?hmac=ico2KysoswVG8E8r550V_afIWN963F6ygTVrqHeHeRc" alt="Card imagen cap" width="100%" height="350px">
+                    </div>
+                    <div class="col-md-4 col-sm-6 px-1 my-1">
+                        <img src="https://i.picsum.photos/id/1022/6000/3376.jpg?hmac=FBA9Qbec8NfDlxj8xLhV9k3DQEKEc-3zxkQM-hmfcy0" alt="Card imagen cap" width="100%" height="350px">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 px-1 my-1">
+                        <img src="https://picsum.photos/id/237/200/300" alt="Card imagen cap" width="100%" height="350px">
+                    </div>
+                    <div class="col-md-4 col-sm-6 px-1 my-1">
+                        <img src="https://picsum.photos/seed/picsum/200/300" alt="Card imagen cap" width="100%" height="350px">
+                    </div>
+                    <div class="col-md-4 col-sm-6 px-1 my-1">
+                        <img src="https://picsum.photos/200/300?grayscale" alt="Card imagen cap" width="100%" height="350px">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 px-1 my-1">
+                        <img src="https://picsum.photos/200/300/?blur" alt="Card imagen cap" width="100%" height="350px">
+                    </div>
+                    <div class="col-md-4 col-sm-6 px-1 my-1">
+                        <img src="https://picsum.photos/200/300.jpg" alt="Card imagen cap" width="100%" height="350px">
+                    </div>
+                    <div class="col-md-4 col-sm-6 px-1 my-1">
+                        <img src="https://picsum.photos/id/263/3635/5301" alt="Card imagen cap" width="100%" height="350px">
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="view2" class="container-fluid tab-pane bg-light"><br>
+
+                <div class="row justify-content-center">
+
+                    <div class="col-6">
+
+                        <div class="card mx-auto custom-card">
+                            <div class="row post-header col-12 py-2 px-3">
+                                <div class="col-6 float-left">
+                                    <h4>My first Photo</h4>
+                                </div>
+                                <div class="col-6 float-right text-right post-number">
+                                    <h4>05/30</h4>
+                                </div>
+                            </div>
+                            <img class="card-img" src="https://i.picsum.photos/id/1015/6000/4000.jpg?hmac=aHjb0fRa1t14DTIEBcoC12c5rAXOSwnVlaA5ujxPQ0I" alt="card imagen cap">
+                            <div class="card-body px-3">
+                                <h5 class="card-title">1000 Likes</h5>
+                                <p class="card-text">This is my first photo of the feed.</p>
+                            </div>
+                            <div class="row post-header px-3 pb-3">
+                                <div class="col-1 float-left text-left"><i class="far fa-heart"></i></div>
+                                <div class="col-10 float-left text-left">Comment...</div>
+                                <div class="col-1 float-right text-right"><i class="fa fa-ellipsis-v"
+                                        aria-hidden="true"></i></div>
+                            </div>
                         </div>
-                        <div class="row text-start">
-                           <div class="col-3">
-                              <button type="button" class="btn btn-light"><i class="fa fa-camera"></i></button>
-                              <button type="button" class="btn btn-light"><i class="fa fa-camera"></i></button>
-                           </div>
+
+                        <div class="card mx-auto custom-card mt-3">
+                            <div class="row post-header col-12 py-2 px-3">
+                                <div class="col-6 float-left">
+                                    <h4>My second Photo</h4>
+                                </div>
+                                <div class="col-6 float-right text-right post-number">
+                                    <h4>05/30</h4>
+                                </div>
+                            </div>
+                            <img class="card-img" src="https://i.picsum.photos/id/102/4320/3240.jpg?hmac=ico2KysoswVG8E8r550V_afIWN963F6ygTVrqHeHeRc" alt="card imagen cap">
+                            <div class="card-body px-3">
+                                <h5 class="card-title">3500 Likes</h5>
+                                <p class="card-text">This is my second photo of the feed.</p>
+                            </div>
+                            <div class="row post-header px-3 pb-3">
+                                <div class="col-1 float-left text-left"><i class="far fa-heart"></i></div>
+                                <div class="col-10 float-left text-left">Comment...</div>
+                                <div class="col-1 float-right text-right"><i class="fa fa-ellipsis-v"
+                                        aria-hidden="true"></i></div>
+                            </div>
                         </div>
-                     </div>
 
-                     <div class="modal-footer">
-                        <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
-                        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Publish</button>
-                     </div>
+                        <div class="card mx-auto custom-card mt-3">
+                            <div class="row post-header col-12 py-2 px-3">
+                                <div class="col-6 float-left">
+                                    <h4>My third Photo</h4>
+                                </div>
+                                <div class="col-6 float-right text-right post-number">
+                                    <h4>05/30</h4>
+                                </div>
+                            </div>
+                            <img class="card-img" src="https://i.picsum.photos/id/1022/6000/3376.jpg?hmac=FBA9Qbec8NfDlxj8xLhV9k3DQEKEc-3zxkQM-hmfcy0" alt="card imagen cap">
+                            <div class="card-body px-3">
+                                <h5 class="card-title">2 Likes</h5>
+                                <p class="card-text">This is my third photo of the feed</p>
+                            </div>
+                            <div class="row post-header px-3 pb-3">
+                                <div class="col-1 float-left text-left"><i class="far fa-heart"></i></div>
+                                <div class="col-10 float-left text-left">Comment...</div>
+                                <div class="col-1 float-right text-right"><i class="fa fa-ellipsis-v"
+                                        aria-hidden="true"></i></div>
+                            </div>
+                        </div>
 
-                  </div>
-               </div>
+                    </div>
+                </div>
             </div>
 
-            <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown">
-               <i class="fa fa-gear"></i>
-            </button>
-
-
-
-
-
-            <ul class="dropdown-menu">
-               <li><a class="dropdown-item" href="#">Action</a></li>
-               <li><a class="dropdown-item" href="#">Another action</a></li>
-               <li><a class="dropdown-item" href="#">Something else here</a></li>
-               <li>
-                  <hr class="dropdown-divider">
-                  </hr>
-               </li>
-               <li><a class="dropdown-item" href="#">Log out</a></li>
-
-
-            </ul>
-         </div>
-      </div>
-
-   </div>
-   <div class="photo-feed1">
-      <!-- Nav pills -->
-      <ul class="nav nav-pills nav justify-content-center p-2" role="tablist">
-         <li class="nav-item">
-            <a class="nav-link active" data-bs-toggle="pill" href="#home">Grid</a>
-         </li>
-         <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="pill" href="#menu1">Photos</a>
-         </li>
-      </ul>
-
-      <!-- Tab panes -->
-      <div class="tab-content">
-         <div id="home" class="container-fluid p-0">
-            <div class="row">
-               <div class="col-lg-4 col-md-4 col-xs-4 thumb">
-                  <a class="thumbnail" href="#">
-                     <img class="img-responsive"
-                        src=https://images.all-free-download.com/images/graphicwebp/animal_canine_cat_cute_dog_eyes_hair_lion_mammal_599319.webp
-                        alt="">
-                  </a>
-               </div>
-               <div class="col-lg-4 col-md-4 col-xs-4 thumb">
-                  <a class="thumbnail" href="#">
-                     <img class="img-responsive"
-                        src="https://images.all-free-download.com/images/graphicwebp/animal_canine_cat_cute_dog_eyes_hair_lion_mammal_599319.webp"
-                        alt="">
-                  </a>
-               </div>
-               <div class="col-lg-4 col-md-4 col-xs-4 thumb">
-                  <a class="thumbnail" href="#">
-                     <img class="img-responsive"
-                        src="https://images.all-free-download.com/images/graphicwebp/animal_canine_cat_cute_dog_eyes_hair_lion_mammal_599319.webp"
-                        alt="">
-                  </a>
-               </div>
-            </div>
-            <div class="row">
-               <div class="col-lg-4 col-md-4 col-xs-4 thumb">
-                  <a class="thumbnail" href="#">
-                     <img class="img-responsive"
-                        src=https://images.all-free-download.com/images/graphicwebp/animal_canine_cat_cute_dog_eyes_hair_lion_mammal_599319.webp
-                        alt="">
-                  </a>
-               </div>
-               <div class="col-lg-4 col-md-4 col-xs-4 thumb">
-                  <a class="thumbnail" href="#">
-                     <img class="img-responsive"
-                        src="https://images.all-free-download.com/images/graphicwebp/animal_canine_cat_cute_dog_eyes_hair_lion_mammal_599319.webp"
-                        alt="">
-                  </a>
-               </div>
-               <div class="col-lg-4 col-md-4 col-xs-4 thumb">
-                  <a class="thumbnail" href="#">
-                     <img class="img-responsive"
-                     src="https://images.all-free-download.com/images/graphicwebp/animal_canine_cat_cute_dog_eyes_hair_lion_mammal_599319.webp"
-                        alt="">
-                  </a>
-               </div>
-            </div>
-            <div class="row">
-               <div class="col-lg-4 col-md-4 col-xs-4 thumb">
-                  <a class="thumbnail" href="#">
-                     <img class="img-responsive"
-                        src=https://images.all-free-download.com/images/graphicwebp/animal_canine_cat_cute_dog_eyes_hair_lion_mammal_599319.webp
-                        alt="">
-                  </a>
-               </div>
-               <div class="col-lg-4 col-md-4 col-xs-4 thumb">
-                  <a class="thumbnail" href="#">
-                     <img class="img-responsive"
-                        src="https://images.all-free-download.com/images/graphicwebp/animal_canine_cat_cute_dog_eyes_hair_lion_mammal_599319.webp"
-                        alt="">
-                  </a>
-               </div>
-               <div class="col-lg-4 col-md-4 col-xs-4 thumb">
-                  <a class="thumbnail" href="#">
-                     <img class="img-responsive"
-                        src="https://images.all-free-download.com/images/graphicwebp/animal_canine_cat_cute_dog_eyes_hair_lion_mammal_599319.webp"
-                        alt="">
-                  </a>
-               </div>
-            </div>
-
-
-         </div>
-
-         <div id="menu1" class="container tab-pane fade"><br>
-            <h3>Menu 1</h3>
-            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-               commodo
-               consequat.</p>
-         </div>
-
-      </div>
-   </div>
-
-
-
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-      crossorigin="anonymous"></script>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
